@@ -1,6 +1,7 @@
-# Neverlose UI-Library
+# LIBRARY IS NOT DONE AND SOME BUGS MAY OCCUR
 
-**LIBRARY IS NOT DONE AND SOME BUGS MAY OCCUR**
+
+# Neverlose UI-Library
 
 My UI-Library for Roblox Exploiting, [source code](.Source.lua) is not obfuscated.
 
@@ -41,7 +42,7 @@ To create a button in section:
 
 ```lua
 local Button = Wow_Section:Button("Button Name", function()
-	print("123")
+    print("123")
 end)
 ```
 
@@ -49,7 +50,7 @@ To create a toggle in section:
 
 ```lua
 local Toggle = Wow_Section:Toggle("Toggle Name", true, function(Bool)
-	print(Bool)
+    print(Bool)
 end)
 ```
 
@@ -57,7 +58,7 @@ To create a slider in section:
 
 ```lua
 local Slider = Idk_Section:Slider("Slider Name", 1, 5, 1, function(Value)
-	print(Value)
+    print(Value)
 end)
 ```
 *2nd argument is min value of slider, 3rd argument is max value of slider, 4th argument is value to start with*
