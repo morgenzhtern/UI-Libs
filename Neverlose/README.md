@@ -18,9 +18,9 @@ To load the UI, simply call the function:
 ```lua
 local Window = Library:Window("idk", Color3.fromRGB(5, 189, 249), Enum.KeyCode.LeftShift)
 ```
-*Argument 1: Name of your UI (`String`)*
-*Argument 2: Main color of your UI (`Color3.fromRGB`)*
-*Argument 3: UI hide bind (`Enum.KeyCode`)*
+**Argument 1: Name of your UI (`String`)**
+**Argument 2: Main color of your UI (`Color3.fromRGB`)**
+**Argument 3: UI hide bind (`Enum.KeyCode`)**
 
 ## Implementing Features
 
@@ -31,8 +31,8 @@ You can create multiple tabs to organize your features:
 ```lua
 local Rage = Window:Tab("MyTab", "http://www.roblox.com/asset/?id=13755099386")
 ```
-*Argument 1: Name of your tab (`String`)*
-*Argument 2: The Image ID (`String`)*
+**Argument 1: Name of your tab (`String`)**
+**Argument 2: The Image ID (`String`)**
 
 And you can create labels:
 
@@ -69,9 +69,9 @@ local Slider = Idk_Section:Slider("Slider Name", 1, 5, 1, function(Value)
     print(Value)
 end)
 ```
-*Argument 2: Min value of slider*
-*Argument 3: Max value of slider*
-*Argument 4: Value to start with*
+**Argument 2: Min value of slider (`Number`)**
+**Argument 3: Max value of slider (`Number`)**
+**Argument 4: Value to start with (`Number`)**
 
 You can change value of slider:
 
@@ -84,7 +84,7 @@ Also you can set visiblity of any button in section:
 ```lua
 Button:Visiblity(true)
 ```
-*In Argument 1 you can use **only bool** (`true` or `false`)*
+**In Argument 1 you can use **only bool** (`true` or `false`)**
 
 And you can destroy any button in section:
 
