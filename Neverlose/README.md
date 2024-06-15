@@ -16,11 +16,10 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/morge
 To load the UI, simply call the function:
 
 ```lua
-local Window = Library:Window("idk", Color3.fromRGB(5, 189, 249), Enum.KeyCode.LeftShift)
+local Window = Library:Window("idk", Enum.KeyCode.LeftShift)
 ```
 **Argument 1: Name of your UI (`String`)**
-**Argument 2: Main color of your UI (`Color3.fromRGB`)**
-**Argument 3: UI hide bind (`Enum.KeyCode`)**
+**Argument 2: UI hide bind (`Enum.KeyCode`)**
 
 ## Implementing Features
 
@@ -29,10 +28,11 @@ local Window = Library:Window("idk", Color3.fromRGB(5, 189, 249), Enum.KeyCode.L
 You can create multiple tabs to organize your features:
 
 ```lua
-local Tab = Window:Tab("MyTab", "http://www.roblox.com/asset/?id=13755099386")
+local Tab = Window:Tab("MyTab", "http://www.roblox.com/asset/?id=13755099386", false)
 ```
 **Argument 1: Name of your tab (`String`)**
 **Argument 2: The Image ID (`String`)**
+**Argument 3: if you write `true` here, then tab will contain only text, it's better to try it yourself (use ```lua Tab:Text("Text", Color3.fromRGB(255, 0, 0)) ``` to add text)**
 
 And you can create labels:
 
