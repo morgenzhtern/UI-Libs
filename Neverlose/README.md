@@ -3,7 +3,7 @@
 
 # Neverlose UI-Library
 
-My UI-Library for Roblox Exploiting, [source code](.Source.lua) is not obfuscated.
+My UI-Library for Roblox Exploiting, [source code](Source.lua) is not obfuscated.
 
 ## Getting Started
 
