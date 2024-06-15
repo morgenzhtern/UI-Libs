@@ -32,7 +32,10 @@ local Tab = Window:Tab("MyTab", "http://www.roblox.com/asset/?id=13755099386", f
 ```
 **Argument 1: Name of your tab (`String`)**
 **Argument 2: The Image ID (`String`)**
-**Argument 3: if you write `true` here, then tab will contain only text, it's better to try it yourself (use ```lua Tab:Text("Text", Color3.fromRGB(255, 0, 0)) ``` to add text)**
+**Argument 3: if you write `true` here, then tab will contain only text, it's better to try it yourself (use script below to add text)**
+```lua
+Tab:Text("Text", Color3.fromRGB(255, 0, 0)) 
+```
 
 And you can create labels:
 
