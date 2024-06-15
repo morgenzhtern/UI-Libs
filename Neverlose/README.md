@@ -19,6 +19,7 @@ To load the UI, simply call the function:
 local Window = Library:Window("idk", Enum.KeyCode.LeftShift)
 ```
 **Argument 1: Name of your UI (`String`)**
+
 **Argument 2: UI hide bind (`Enum.KeyCode`)**
 
 ## Implementing Features
@@ -31,7 +32,9 @@ You can create multiple tabs to organize your features:
 local Tab = Window:Tab("MyTab", "http://www.roblox.com/asset/?id=13755099386", false)
 ```
 **Argument 1: Name of your tab (`String`)**
+
 **Argument 2: The Image ID (`String`)**
+
 **Argument 3: if you write `true` here, then tab will contain only text, it's better to try it yourself (use script below to add text)**
 ```lua
 Tab:Text("Text", Color3.fromRGB(255, 0, 0)) 
@@ -73,7 +76,9 @@ local Slider = Idk_Section:Slider("Slider Name", 1, 5, 1, function(Value)
 end)
 ```
 **Argument 2: Min value of slider (`Number`)**
+
 **Argument 3: Max value of slider (`Number`)**
+
 **Argument 4: Value to start with (`Number`)**
 
 You can change value of slider:
