@@ -98,5 +98,5 @@ You can ReName any button in section:
 Button:ReName("New Name")
 ```
 
-## Enjoy using the Neverlose UI-Library!
-## Have fun.
+Enjoy using the Neverlose UI-Library!
+Have fun.
