@@ -29,7 +29,7 @@ local Window = Library:Window("idk", Color3.fromRGB(5, 189, 249), Enum.KeyCode.L
 You can create multiple tabs to organize your features:
 
 ```lua
-local Rage = Window:Tab("MyTab", "http://www.roblox.com/asset/?id=13755099386")
+local Tab = Window:Tab("MyTab", "http://www.roblox.com/asset/?id=13755099386")
 ```
 **Argument 1: Name of your tab (`String`)**
 **Argument 2: The Image ID (`String`)**
@@ -43,7 +43,7 @@ Window:Label("Label Name")
 To create a section in tab:
 
 ```lua
-local Wow_Section = Rage:Section("Wow")
+local Wow_Section = Tab:Section("Wow")
 ```
 
 ### Button
