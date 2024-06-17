@@ -5,7 +5,7 @@ local Player = game:GetService("Players").LocalPlayer
 local Tween = game:GetService("TweenService")
 local UIS = game:GetService("UserInputService")
 
-local Inject_Path = Player.PlayerGui
+local Inject_Path = game.CoreGui
 
 local Bool = New("BoolValue")
 Bool.Value = true
