@@ -119,19 +119,17 @@ local function Give_Transparency_Value(GUI)
   
 end
 
-local Screen = New("ScreenGui")
-
-Screen.Parent = Inject_Path
-Screen.Name = "Azure"
-Screen.ResetOnSpawn = false
-Screen.IgnoreGuiInset = true
-Screen.DisplayOrder = 7777777
-
 local Library = {}
 
 function Library:Window(Name, Bind)
   
-  local Background, Main, Container, Layout, Script_Name, Right_Line = New("Frame"), New("Frame"), New("ScrollingFrame"), New("UIListLayout"), New("TextLabel"), New("Frame")
+  local Screen, Background, Main, Container, Layout, Script_Name, Right_Line, Menu, Search, Menu_Page, Menu_Container, Menu_Image, Menu_Name, Menu_Close, Menu_Layout = New("ScreenGui"), New("Frame"), New("Frame"), New("ScrollingFrame"), New("UIListLayout"), New("TextLabel"), New("Frame"), New("ImageButton"), New("ImageButton"), New("Frame"), New("Frame"), New("ImageLabel"), New("TextLabel"), New("ImageButton"), New("UIListLayout")
+  
+  Screen.Parent = Inject_Path
+  Screen.Name = "Azure"
+  Screen.ResetOnSpawn = false
+  Screen.IgnoreGuiInset = true
+  Screen.DisplayOrder = 7777777
   
   Background.Parent = Screen
   Background.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -142,18 +140,90 @@ function Library:Window(Name, Bind)
   Background.Size = UDim2.new(0.499, 0, 0.789, 0)
   
   Main.Parent = Background
-  Main.BackgroundColor3 = Color3.fromRGB(13, 28, 35)
-  Main.BackgroundTransparency = 0.08
+  Main.BackgroundColor3 = Color3.fromRGB(0, 1, 9)
+  Main.BackgroundTransparency = 0.1
   Main.BorderSizePixel = 0
   Main.Position = UDim2.new(-0.302, 0, 0, 0)
   Main.Size = UDim2.new(0.313, 0, 1, 0)
   Main.ZIndex = -1
   
-  Right_Line.Parent = Main
+  Right_Line.Parent = Background
   Right_Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
   Right_Line.BackgroundTransparency = 0.99
   Right_Line.Position = UDim2.new(0.966, 0, 0.118, 0)
   Right_Line.Size = UDim2.new(3.228, 0, 0.005, 0)
+  
+  Menu.Parent = Background
+  Menu.BackgroundTransparency = 1
+  Menu.Position = UDim2.new(0.859, 0, 0.036, 0)
+  Menu.Size = UDim2.new(0.04, 0, 0.042, 0)
+  Menu.Image = "rbxassetid://11295285432"
+  Menu.ImageColor3 = Color3.fromRGB(255, 255, 255)
+  Menu.ZIndex = 10
+  
+  Menu_Page.Parent = Background
+  Menu_Page.Visible = false
+  Menu_Page.BackgroundColor3 = Color3.fromRGB(4, 15, 29)
+  Menu_Page.Position = UDim2.new(0.13, 0, 0.179, 0)
+  Menu_Page.Size = UDim2.new(0.457, 0, 0.642, 0)
+  Menu_Page.ZIndex = 10
+  
+  Menu_Container.Parent = Menu_Page
+  Menu_Container.BackgroundTransparency = 1
+  Menu_Container.Position = UDim2.new(0, 0, 0.079, 0)
+  Menu_Container.Size = UDim2.new(0.977, 0, 0.919, 0)
+  Menu_Container.ZIndex = 10
+  
+  Menu_Image.Parent = Menu_Page
+  Menu_Image.BackgroundTransparency = 1
+  Menu_Image.Position = UDim2.new(0.022, 0, 0.017, 0)
+  Menu_Image.Size = UDim2.new(0.055, 0, 0.042, 0)
+  Menu_Image.Image = "rbxassetid://11293977610"
+  Menu_Image.ImageColor3 = Color3.fromRGB(85, 192, 238)
+  Menu_Image.ZIndex = 10
+  
+  Menu_Name.Parent = Menu_Page
+  Menu_Name.BackgroundTransparency = 1
+  Menu_Name.Position = UDim2.new(0.092, 0, 0.017, 0)
+  Menu_Name.Size = UDim2.new(0.55, 0, 0.042, 0)
+  Menu_Name.Text = "Settings (not done)"
+  Menu_Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+  Menu_Name.TextScaled = true
+  Menu_Name.TextXAlignment = Enum.TextXAlignment.Left
+  Menu_Name.ZIndex = 10
+  
+  Menu_Close.Parent = Menu_Page
+  Menu_Close.Image = "rbxassetid://11293981586"
+  Menu_Close.BackgroundTransparency = 1
+  Menu_Close.ImageColor3 = Color3.fromRGB(255, 255, 255)
+  Menu_Close.Position = UDim2.new(0.922, 0, 0.017, 0)
+  Menu_Close.Size = UDim2.new(0.055, 0, 0.042, 0)
+  Menu_Close.ZIndex = 10
+  
+  Menu_Layout.Parent = Menu_Container
+  Menu_Layout.FillDirection = Enum.FillDirection.Vertical
+  Menu_Layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+  Menu_Layout.VerticalAlignment = Enum.VerticalAlignment.Top
+  
+  Search.Parent = Background
+  Search.BackgroundTransparency = 1
+  Search.Position = UDim2.new(0.925, 0, 0.036, 0)
+  Search.Size = UDim2.new(0.04, 0, 0.042, 0)
+  Search.Image = "rbxassetid://11293977875"
+  Search.ImageColor3 = Color3.fromRGB(255, 255, 255)
+  Search.ZIndex = 10
+  
+  Menu_Close.MouseButton1Click:Connect(function()
+    
+    Menu_Page.Visible = false
+    
+  end)
+  
+  Menu.MouseButton1Click:Connect(function()
+    
+    Menu_Page.Visible = not Menu_Page.Visible
+    
+  end)
   
   Container.Parent = Main
   Container.BackgroundTransparency = 1
@@ -189,17 +259,26 @@ function Library:Window(Name, Bind)
   Give_Transparency_Value(Main)
   Give_Transparency_Value(Script_Name)
   Give_Transparency_Value(Right_Line)
+  Give_Transparency_Value(Menu)
+  Give_Transparency_Value(Search)
   
   Ratio(Background, 1.057)
+  Ratio(Menu, 1)
+  Ratio(Search, 1)
   
   Corner(Main, 6)
   Corner(Background, 6)
+  Corner(Menu_Page, 6)
 
   Make_Draggable(Background)
   
-  local Container_Functions = {}
+  local Window_Functions = {}
   
-  function Container_Functions:Label(Name)
+  function Window_Functions:Destroy()
+    Screen:Destroy()
+  end
+  
+  function Window_Functions:Label(Name)
     
     local Barrier, Label = New("Frame"), New("TextLabel")
     
@@ -222,7 +301,7 @@ function Library:Window(Name, Bind)
     
   end
   
-  function Container_Functions:Tab(Name, Icon, Info)
+  function Window_Functions:Tab(Name, Icon, Info)
     
     local Barrier, Button, Image, Title, New_Container, Layout, Left_Side, Left_Layout, Right_Side, Right_Layout = New("Frame"), New("TextButton"), New("ImageLabel"), New("TextLabel"), New("ScrollingFrame"), New("UIListLayout"), New("Frame"), New("UIListLayout"), New("Frame"), New("UIListLayout")
     
@@ -1021,7 +1100,7 @@ function Library:Window(Name, Bind)
         Label.Parent = New_Container
         Label.BackgroundTransparency = 1
         Label.Size = UDim2.new(1, 0, 0.037, 0)
-        Label.Font = Enum.Font.Montserrat
+        Label.Font = Enum.Font.Gotham
         Label.Text = Text
         Label.TextColor3 = Color
         Label.TextScaled = true
@@ -1166,7 +1245,7 @@ function Library:Window(Name, Bind)
     
   end)
   
-  return Container_Functions
+  return Window_Functions
   
 end
 
