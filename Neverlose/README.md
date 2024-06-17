@@ -1,14 +1,9 @@
-**LIBRARY IS NOT DONE AND SOME BUGS MAY OCCUR**
-<br/>
-
 # Neverlose UI-Library
 
 My UI-Library for Roblox Exploiting, [source code](Source.lua) is not obfuscated.
 
-## Usage
-
-[Example Script](Example.lua)
-<br/>
+Since documentation will be large, there is an [Example Script](Example.lua) of usage with all features.
 
 Enjoy using the Neverlose UI-Library!
+<br/>
 Have fun.
