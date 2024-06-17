@@ -5,7 +5,7 @@ local Player = game:GetService("Players").LocalPlayer
 local Tween = game:GetService("TweenService")
 local UIS = game:GetService("UserInputService")
 
-local Inject_Path = game.CoreGui
+local Inject_Path = Player.PlayerGui
 
 local Bool = New("BoolValue")
 Bool.Value = true
@@ -241,8 +241,8 @@ function Library:Window(Name, Bind)
   Script_Name.Parent = Main
   Script_Name.BackgroundTransparency = 1
   Script_Name.Position = UDim2.new(0, 0, 0.047, 0)
-  Script_Name.Size = UDim2.new(1, 0, 0.071, 0)
-  Script_Name.Font = Enum.Font.Ubuntu
+  Script_Name.Size = UDim2.new(0.965, 0, 0.051, 0)
+  Script_Name.Font = Enum.Font.Gotham
   Script_Name.Text = Name
   Script_Name.TextScaled = true
   Script_Name.TextColor3 = Color3.fromRGB(255, 255, 255)
