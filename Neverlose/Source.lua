@@ -126,7 +126,7 @@ function Library:Window(Name, Bind)
   local Screen, Background, Main, Container, Layout, Script_Name, Right_Line, Menu, Search, Menu_Page, Menu_Container, Menu_Image, Menu_Name, Menu_Close, Menu_Layout = New("ScreenGui"), New("Frame"), New("Frame"), New("ScrollingFrame"), New("UIListLayout"), New("TextLabel"), New("Frame"), New("ImageButton"), New("ImageButton"), New("Frame"), New("Frame"), New("ImageLabel"), New("TextLabel"), New("ImageButton"), New("UIListLayout")
   
   Screen.Parent = Inject_Path
-  Screen.Name = "Azure"
+  Screen.Name = "Neverlose"
   Screen.ResetOnSpawn = false
   Screen.IgnoreGuiInset = true
   Screen.DisplayOrder = 7777777
