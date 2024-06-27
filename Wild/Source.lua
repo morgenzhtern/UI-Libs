@@ -162,6 +162,7 @@ function Library_Functions:Window(Name, Main_Color, UI_Hide__Bind)
     Text.Size = UDim2.new(0.841, 0, 0.655, 0)
     Text.Font = Enum.Font.Nunito
     Text.TextScaled = true
+    Text.TextColor3 = Color3.fromRGB(255, 255, 255)
     Text.Text = Name
     
     Make_Text_Bold(Text)
