@@ -209,6 +209,12 @@ function Library_Functions:Window(Name, Main_Color, UI_Hide__Bind)
   Add_Ratio(Main, 1.37)
 
   local Window_Functions = {}
+
+  function Window_Functions:Destroy()
+
+    Main:Destroy()
+    
+  end
   
   function Window_Functions:ReColor(Color)
     
