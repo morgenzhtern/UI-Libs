@@ -257,6 +257,7 @@ function Library_Functions:Window(Name, Main_Color, UI_Hide__Bind)
     Button.Parent = Tabs
     Button.BackgroundTransparency = 1
     Button.Size = UDim2.new(1, 0, 0.075, 0)
+    Button.TextTransparency = 1
 
     Second_Background.Parent = Button
     Second_Background.Name = "2"
